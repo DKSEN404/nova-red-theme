@@ -1,0 +1,422 @@
+/* ============================================================
+   Nova Red Theme — Cyberpunk RED Core Theme Pack
+   Provides 3 additional themes for the CPR system.
+   ============================================================ */
+
+/* ── Nova Red (Amber) — Base override when module is active ── */
+:root {
+  --cpr-font-primary: "Tektur", monospace;
+
+  --cpr-color-black: #000000;
+  --cpr-color-dark-grey: #332200;
+  --cpr-color-faded-black: rgba(0, 0, 0, 0.6);
+  --cpr-color-light-grey: #664d00;
+  --cpr-color-medium-grey: #554400;
+  --cpr-color-near-black: #0a0a0a;
+  --cpr-color-off-black: #050505;
+  --cpr-color-pink: #ff8c00;
+  --cpr-color-red: #ff2a2a;
+  --cpr-color-white: #ffb000;
+
+  --cpr-background-border: #ffb000;
+  --cpr-background-box: #0a0a0a;
+  --cpr-background-chat-border: #ffb000;
+  --cpr-background-chat-card-block-before: #0a0a0a;
+  --cpr-background-chat-card-block: #ffb000;
+  --cpr-background-chat-card: #0a0a0a;
+  --cpr-background-chat: rgba(0, 0, 0, 0.6);
+  --cpr-background-chat-inline-roll: rgba(255, 176, 0, 0.1);
+  --cpr-background-code: #1a1a00;
+  --cpr-background-cyberdeck-section-header: #1a1a00;
+  --cpr-background-dialog-border: #ffb000;
+  --cpr-background-dialog-hr-gradient-end: #332200;
+  --cpr-background-dialog-hr-gradient-middle: rgba(255, 176, 0, 0.5);
+  --cpr-background-dialog-hr-gradient-start: #000000;
+  --cpr-background-dialog-selected: #1a1a00;
+  --cpr-background-editor-button: #1a1a0a;
+  --cpr-background-editor-button-selected: #332200;
+  --cpr-background-editor-header: #0a0a0a;
+  --cpr-background-foundry-hover: #ffb000;
+  --cpr-background-foundry-input: #0d0d0d;
+  --cpr-background-foundry-button: #1a1a0a;
+  --cpr-background-header: #000000;
+  --cpr-background-migration-progress: #00ffaa;
+  --cpr-background-migration-modal-backdrop: rgba(0, 0, 0, 0.85);
+  --cpr-background-progress-border: #ffb000;
+  --cpr-background-progress-label: rgba(0, 0, 0, 0.6);
+  --cpr-background-progress: #ffb000;
+  --cpr-background-pill: #1a1a00;
+  --cpr-background-row-even: #0a0a0a;
+  --cpr-background-row-odd: #0d0d0d;
+  --cpr-background-tab-active: #ffb000;
+  --cpr-background-tab-inactive: #0d0d0d;
+  --cpr-background-tab-underlay: #1a1a00;
+  --cpr-background-toggle-unchecked: #332200;
+  --cpr-background-toggle-checked: #ffb000;
+  --cpr-background-toggle-dot: #ffb000;
+  --cpr-background-window: #050505;
+  --cpr-background-content-link: #1a1a0a;
+  --cpr-background-journal-blockquote: #111100;
+  --cpr-background-journal-secret-hidden-border: #ff2a2a;
+  --cpr-background-journal-secret-hidden-background: rgba(255, 42, 42, 0.1);
+  --cpr-background-journal-info: rgba(0, 255, 170, 0.1);
+  --cpr-background-item-dir-installed-header: rgba(255, 176, 0, 0.1);
+  --cpr-pause-text: #ffb000;
+  --cpr-pause-highlight1: #ff8c00;
+  --cpr-pause-highlight2: #00ffaa;
+  --cpr-item-dir-border: rgba(255, 176, 0, 0.3);
+  --cpr-migration-overlay-error: rgba(255, 42, 42, 0.7);
+  --cpr-migration-overlay-success: rgba(0, 255, 170, 0.7);
+  --cpr-migration-overlay-warning: rgba(255, 176, 0, 0.7);
+
+  --cpr-text-chat-failure: #ff2a2a;
+  --cpr-text-chat-normal: #ffb000;
+  --cpr-text-chat-success: #00ffaa;
+  --cpr-text-content-link-icon: #ffb000;
+  --cpr-text-editor-button: #ffb000;
+  --cpr-text-editor-header: #ffb000;
+  --cpr-text-foundry-hint: #aa7700;
+  --cpr-text-foundry-hover: #ffcc00;
+  --cpr-text-foundry-input: #ffb000;
+  --cpr-text-header: #ffb000;
+  --cpr-text-header-line: #ffb000;
+  --cpr-text-header-line-box: #ff8c00;
+  --cpr-text-header-arrow: #ffb000;
+  --cpr-text-icon-dimmed: #554400;
+  --cpr-text-icon-highlight: #ff8c00;
+  --cpr-text-icon-normal: #ffb000;
+  --cpr-text-input: #ffb000;
+  --cpr-text-mook-header: #ffb000;
+  --cpr-text-mook-name: #ffb000;
+  --cpr-text-mook-normal: #ffb000;
+  --cpr-text-normal: #ffb000;
+  --cpr-text-pill: #ffb000;
+  --cpr-text-tab-highlight: #000000;
+  --cpr-text-tab-normal: #ffb000;
+  --cpr-text-window: #ffb000;
+  --cpr-text-hint: #aa7700;
+  --cpr-text-pause: #ffb000;
+  --cpr-text-journal-table-header: #000000;
+  --cpr-text-dir-list: #ffb000;
+  --cpr-icon-actor-image-overlay: #ffb000;
+  --cpr-icon-actor-image-overlay-border: #ff8c00;
+}
+
+html[data-cpr-theme="default"] {
+  background-image:
+    linear-gradient(rgba(255, 176, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 176, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ── Nova Red (Amber) theme ── */
+html[data-cpr-theme="nova-red"] {
+  --cpr-font-primary: "Tektur", monospace;
+
+  --cpr-color-black: #000000;
+  --cpr-color-dark-grey: #332200;
+  --cpr-color-faded-black: rgba(0, 0, 0, 0.6);
+  --cpr-color-light-grey: #664d00;
+  --cpr-color-medium-grey: #554400;
+  --cpr-color-near-black: #0a0a0a;
+  --cpr-color-off-black: #050505;
+  --cpr-color-pink: #ff8c00;
+  --cpr-color-red: #ff2a2a;
+  --cpr-color-white: #ffb000;
+
+  --cpr-background-border: #ffb000;
+  --cpr-background-box: #0a0a0a;
+  --cpr-background-chat-border: #ffb000;
+  --cpr-background-chat-card-block-before: #0a0a0a;
+  --cpr-background-chat-card-block: #ffb000;
+  --cpr-background-chat-card: #0a0a0a;
+  --cpr-background-chat: rgba(0, 0, 0, 0.6);
+  --cpr-background-chat-inline-roll: rgba(255, 176, 0, 0.1);
+  --cpr-background-code: #1a1a00;
+  --cpr-background-cyberdeck-section-header: #1a1a00;
+  --cpr-background-dialog-border: #ffb000;
+  --cpr-background-dialog-hr-gradient-end: #332200;
+  --cpr-background-dialog-hr-gradient-middle: rgba(255, 176, 0, 0.5);
+  --cpr-background-dialog-hr-gradient-start: #000000;
+  --cpr-background-dialog-selected: #1a1a00;
+  --cpr-background-editor-button: #1a1a0a;
+  --cpr-background-editor-button-selected: #332200;
+  --cpr-background-editor-header: #0a0a0a;
+  --cpr-background-foundry-hover: #ffb000;
+  --cpr-background-foundry-input: #0d0d0d;
+  --cpr-background-foundry-button: #1a1a0a;
+  --cpr-background-header: #000000;
+  --cpr-background-migration-progress: #00ffaa;
+  --cpr-background-migration-modal-backdrop: rgba(0, 0, 0, 0.85);
+  --cpr-background-progress-border: #ffb000;
+  --cpr-background-progress-label: rgba(0, 0, 0, 0.6);
+  --cpr-background-progress: #ffb000;
+  --cpr-background-pill: #1a1a00;
+  --cpr-background-row-even: #0a0a0a;
+  --cpr-background-row-odd: #0d0d0d;
+  --cpr-background-tab-active: #ffb000;
+  --cpr-background-tab-inactive: #0d0d0d;
+  --cpr-background-tab-underlay: #1a1a00;
+  --cpr-background-toggle-unchecked: #332200;
+  --cpr-background-toggle-checked: #ffb000;
+  --cpr-background-toggle-dot: #ffb000;
+  --cpr-background-window: #050505;
+  --cpr-background-content-link: #1a1a0a;
+  --cpr-background-journal-blockquote: #111100;
+  --cpr-background-journal-secret-hidden-border: #ff2a2a;
+  --cpr-background-journal-secret-hidden-background: rgba(255, 42, 42, 0.1);
+  --cpr-background-journal-info: rgba(0, 255, 170, 0.1);
+  --cpr-background-item-dir-installed-header: rgba(255, 176, 0, 0.1);
+  --cpr-pause-text: #ffb000;
+  --cpr-pause-highlight1: #ff8c00;
+  --cpr-pause-highlight2: #00ffaa;
+  --cpr-item-dir-border: rgba(255, 176, 0, 0.3);
+  --cpr-migration-overlay-error: rgba(255, 42, 42, 0.7);
+  --cpr-migration-overlay-success: rgba(0, 255, 170, 0.7);
+  --cpr-migration-overlay-warning: rgba(255, 176, 0, 0.7);
+
+  --cpr-text-chat-failure: #ff2a2a;
+  --cpr-text-chat-normal: #ffb000;
+  --cpr-text-chat-success: #00ffaa;
+  --cpr-text-content-link-icon: #ffb000;
+  --cpr-text-editor-button: #ffb000;
+  --cpr-text-editor-header: #ffb000;
+  --cpr-text-foundry-hint: #aa7700;
+  --cpr-text-foundry-hover: #ffcc00;
+  --cpr-text-foundry-input: #ffb000;
+  --cpr-text-header: #ffb000;
+  --cpr-text-header-line: #ffb000;
+  --cpr-text-header-line-box: #ff8c00;
+  --cpr-text-header-arrow: #ffb000;
+  --cpr-text-icon-dimmed: #554400;
+  --cpr-text-icon-highlight: #ff8c00;
+  --cpr-text-icon-normal: #ffb000;
+  --cpr-text-input: #ffb000;
+  --cpr-text-mook-header: #ffb000;
+  --cpr-text-mook-name: #ffb000;
+  --cpr-text-mook-normal: #ffb000;
+  --cpr-text-normal: #ffb000;
+  --cpr-text-pill: #ffb000;
+  --cpr-text-tab-highlight: #000000;
+  --cpr-text-tab-normal: #ffb000;
+  --cpr-text-window: #ffb000;
+  --cpr-text-hint: #aa7700;
+  --cpr-text-pause: #ffb000;
+  --cpr-text-journal-table-header: #000000;
+  --cpr-text-dir-list: #ffb000;
+  --cpr-icon-actor-image-overlay: #ffb000;
+  --cpr-icon-actor-image-overlay-border: #ff8c00;
+
+  background-image:
+    linear-gradient(rgba(255, 176, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 176, 0, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ── Bluewire (Electric) theme ── */
+html[data-cpr-theme="bluewire"] {
+  --cpr-font-primary: "Tektur", monospace;
+
+  --cpr-color-black: #000000;
+  --cpr-color-dark-grey: #003355;
+  --cpr-color-faded-black: rgba(0, 0, 0, 0.6);
+  --cpr-color-light-grey: #006688;
+  --cpr-color-medium-grey: #005577;
+  --cpr-color-near-black: #080c14;
+  --cpr-color-off-black: #05080f;
+  --cpr-color-pink: #0088bb;
+  --cpr-color-red: #ff0044;
+  --cpr-color-white: #00ddff;
+
+  --cpr-background-border: #00bbee;
+  --cpr-background-box: #080c14;
+  --cpr-background-chat-border: #00bbee;
+  --cpr-background-chat-card-block-before: #080c14;
+  --cpr-background-chat-card-block: #00bbee;
+  --cpr-background-chat-card: #080c14;
+  --cpr-background-chat: rgba(0, 0, 0, 0.6);
+  --cpr-background-chat-inline-roll: rgba(0, 187, 238, 0.1);
+  --cpr-background-code: #001a2a;
+  --cpr-background-cyberdeck-section-header: #001a2a;
+  --cpr-background-dialog-border: #00bbee;
+  --cpr-background-dialog-hr-gradient-end: #003355;
+  --cpr-background-dialog-hr-gradient-middle: rgba(0, 187, 238, 0.5);
+  --cpr-background-dialog-hr-gradient-start: #000000;
+  --cpr-background-dialog-selected: #001a2a;
+  --cpr-background-editor-button: #0a1420;
+  --cpr-background-editor-button-selected: #003355;
+  --cpr-background-editor-header: #080c14;
+  --cpr-background-foundry-hover: #00bbee;
+  --cpr-background-foundry-input: #0a1420;
+  --cpr-background-foundry-button: #0a1420;
+  --cpr-background-header: #000205;
+  --cpr-background-migration-progress: #00ff88;
+  --cpr-background-migration-modal-backdrop: rgba(0, 0, 0, 0.85);
+  --cpr-background-progress-border: #00bbee;
+  --cpr-background-progress-label: rgba(0, 0, 0, 0.6);
+  --cpr-background-progress: #00bbee;
+  --cpr-background-pill: #001a2a;
+  --cpr-background-row-even: #080c14;
+  --cpr-background-row-odd: #0a1420;
+  --cpr-background-tab-active: #00bbee;
+  --cpr-background-tab-inactive: #0a1420;
+  --cpr-background-tab-underlay: #001a2a;
+  --cpr-background-toggle-unchecked: #003355;
+  --cpr-background-toggle-checked: #00bbee;
+  --cpr-background-toggle-dot: #00ddff;
+  --cpr-background-window: #05080f;
+  --cpr-background-content-link: #0a1420;
+  --cpr-background-journal-blockquote: #0a1420;
+  --cpr-background-journal-secret-hidden-border: #ff0044;
+  --cpr-background-journal-secret-hidden-background: rgba(255, 0, 68, 0.1);
+  --cpr-background-journal-info: rgba(0, 255, 136, 0.1);
+  --cpr-background-item-dir-installed-header: rgba(0, 187, 238, 0.1);
+  --cpr-pause-text: #00ddff;
+  --cpr-pause-highlight1: #0088bb;
+  --cpr-pause-highlight2: #00ff88;
+  --cpr-item-dir-border: rgba(0, 187, 238, 0.3);
+  --cpr-migration-overlay-error: rgba(255, 0, 68, 0.7);
+  --cpr-migration-overlay-success: rgba(0, 255, 136, 0.7);
+  --cpr-migration-overlay-warning: rgba(0, 187, 238, 0.7);
+
+  --cpr-text-chat-failure: #ff0044;
+  --cpr-text-chat-normal: #00ddff;
+  --cpr-text-chat-success: #00ff88;
+  --cpr-text-content-link-icon: #00ddff;
+  --cpr-text-editor-button: #00ddff;
+  --cpr-text-editor-header: #00ddff;
+  --cpr-text-foundry-hint: #0088aa;
+  --cpr-text-foundry-hover: #66eeff;
+  --cpr-text-foundry-input: #00ddff;
+  --cpr-text-header: #00ddff;
+  --cpr-text-header-line: #00bbee;
+  --cpr-text-header-line-box: #0088bb;
+  --cpr-text-header-arrow: #00bbee;
+  --cpr-text-icon-dimmed: #005577;
+  --cpr-text-icon-highlight: #0088bb;
+  --cpr-text-icon-normal: #00ddff;
+  --cpr-text-input: #00ddff;
+  --cpr-text-mook-header: #00ddff;
+  --cpr-text-mook-name: #00ddff;
+  --cpr-text-mook-normal: #00ddff;
+  --cpr-text-normal: #00ddff;
+  --cpr-text-pill: #00ddff;
+  --cpr-text-tab-highlight: #000000;
+  --cpr-text-tab-normal: #00ddff;
+  --cpr-text-window: #00ddff;
+  --cpr-text-hint: #0088aa;
+  --cpr-text-pause: #00ddff;
+  --cpr-text-journal-table-header: #000000;
+  --cpr-text-dir-list: #00ddff;
+  --cpr-icon-actor-image-overlay: #00ddff;
+  --cpr-icon-actor-image-overlay-border: #0088bb;
+
+  background-image:
+    linear-gradient(rgba(0, 187, 238, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 187, 238, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* ── Afterlife (CP2077) theme ── */
+html[data-cpr-theme="afterlife"] {
+  --cpr-font-primary: "Tektur", monospace;
+
+  --cpr-color-black: #000000;
+  --cpr-color-dark-grey: #330a0a;
+  --cpr-color-faded-black: rgba(0, 0, 0, 0.6);
+  --cpr-color-light-grey: #661111;
+  --cpr-color-medium-grey: #550e0e;
+  --cpr-color-near-black: #0a0505;
+  --cpr-color-off-black: #050000;
+  --cpr-color-pink: #ff6600;
+  --cpr-color-red: #da291c;
+  --cpr-color-white: #f0d000;
+
+  --cpr-background-border: #da291c;
+  --cpr-background-box: #0d0808;
+  --cpr-background-chat-border: #da291c;
+  --cpr-background-chat-card-block-before: #0d0808;
+  --cpr-background-chat-card-block: #da291c;
+  --cpr-background-chat-card: #0d0808;
+  --cpr-background-chat: rgba(0, 0, 0, 0.6);
+  --cpr-background-chat-inline-roll: rgba(218, 41, 28, 0.1);
+  --cpr-background-code: #1a0a0a;
+  --cpr-background-cyberdeck-section-header: #1a0a0a;
+  --cpr-background-dialog-border: #da291c;
+  --cpr-background-dialog-hr-gradient-end: #330a0a;
+  --cpr-background-dialog-hr-gradient-middle: rgba(218, 41, 28, 0.5);
+  --cpr-background-dialog-hr-gradient-start: #000000;
+  --cpr-background-dialog-selected: #1a0a0a;
+  --cpr-background-editor-button: #120a0a;
+  --cpr-background-editor-button-selected: #330a0a;
+  --cpr-background-editor-header: #0a0505;
+  --cpr-background-foundry-hover: #da291c;
+  --cpr-background-foundry-input: #120a0a;
+  --cpr-background-foundry-button: #120a0a;
+  --cpr-background-header: #050000;
+  --cpr-background-migration-progress: #00ff88;
+  --cpr-background-migration-modal-backdrop: rgba(0, 0, 0, 0.85);
+  --cpr-background-progress-border: #f0d000;
+  --cpr-background-progress-label: rgba(0, 0, 0, 0.6);
+  --cpr-background-progress: #f0d000;
+  --cpr-background-pill: #1a0a0a;
+  --cpr-background-row-even: #0d0808;
+  --cpr-background-row-odd: #120a0a;
+  --cpr-background-tab-active: #da291c;
+  --cpr-background-tab-inactive: #120a0a;
+  --cpr-background-tab-underlay: #1a0a0a;
+  --cpr-background-toggle-unchecked: #330a0a;
+  --cpr-background-toggle-checked: #da291c;
+  --cpr-background-toggle-dot: #f0d000;
+  --cpr-background-window: #0a0505;
+  --cpr-background-content-link: #120a0a;
+  --cpr-background-journal-blockquote: #120a0a;
+  --cpr-background-journal-secret-hidden-border: #da291c;
+  --cpr-background-journal-secret-hidden-background: rgba(218, 41, 28, 0.1);
+  --cpr-background-journal-info: rgba(0, 255, 136, 0.1);
+  --cpr-background-item-dir-installed-header: rgba(218, 41, 28, 0.1);
+  --cpr-pause-text: #f0d000;
+  --cpr-pause-highlight1: #ff6600;
+  --cpr-pause-highlight2: #00ff88;
+  --cpr-item-dir-border: rgba(218, 41, 28, 0.3);
+  --cpr-migration-overlay-error: rgba(218, 41, 28, 0.7);
+  --cpr-migration-overlay-success: rgba(0, 255, 136, 0.7);
+  --cpr-migration-overlay-warning: rgba(240, 208, 0, 0.7);
+
+  --cpr-text-chat-failure: #da291c;
+  --cpr-text-chat-normal: #f0d000;
+  --cpr-text-chat-success: #00ff88;
+  --cpr-text-content-link-icon: #f0d000;
+  --cpr-text-editor-button: #f0d000;
+  --cpr-text-editor-header: #f0d000;
+  --cpr-text-foundry-hint: #aa8833;
+  --cpr-text-foundry-hover: #ffee44;
+  --cpr-text-foundry-input: #f0d000;
+  --cpr-text-header: #f0d000;
+  --cpr-text-header-line: #da291c;
+  --cpr-text-header-line-box: #ff6600;
+  --cpr-text-header-arrow: #da291c;
+  --cpr-text-icon-dimmed: #553300;
+  --cpr-text-icon-highlight: #ff6600;
+  --cpr-text-icon-normal: #f0d000;
+  --cpr-text-input: #f0d000;
+  --cpr-text-mook-header: #f0d000;
+  --cpr-text-mook-name: #f0d000;
+  --cpr-text-mook-normal: #f0d000;
+  --cpr-text-normal: #f0d000;
+  --cpr-text-pill: #f0d000;
+  --cpr-text-tab-highlight: #f0d000;
+  --cpr-text-tab-normal: #f0d000;
+  --cpr-text-window: #f0d000;
+  --cpr-text-hint: #aa8833;
+  --cpr-text-pause: #f0d000;
+  --cpr-text-journal-table-header: #000000;
+  --cpr-text-dir-list: #f0d000;
+  --cpr-icon-actor-image-overlay: #f0d000;
+  --cpr-icon-actor-image-overlay-border: #ff6600;
+
+  background-image:
+    linear-gradient(rgba(218, 41, 28, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(218, 41, 28, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
